@@ -28,3 +28,20 @@ ALTER TABLE animals ADD COLUMN species_id  int;
 alter table animals add constraint fk_animal_species foreign key (species_id) references species(id);
 ALTER TABLE animals ADD COLUMN owner_id  int;
 alter table animals add constraint fk_animal_owner foreign key (owner_id) references owner(id);
+
+
+CREATE TABLE vets (
+id serial primary key,
+name varchar(255) not null,
+age int not null,
+date_of_graduation date not null
+);
+CREATE TABLE specializations (
+vets_id int references vets(id),
+species_id int references species(id)
+);
+CREATE TABLE visits (
+animals_id int references animals(id),
+vets_id int references vets(id),
+date_of_visit date
+);
