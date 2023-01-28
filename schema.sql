@@ -12,9 +12,16 @@ CREATE TABLE animals (
 
 ALTER TABLE animals ADD COLUMN species  varchar(100);
 
-CREATE TABLE owner (id serial primary key,full_name varchar(255) not null);
+CREATE TABLE owners (
+id serial primary key,
+full_name varchar(255) not null,
+age int not null
+);
 
-CREATE TABLE species (id serial primary key,name varchar(255) not null);
+CREATE TABLE species (
+id serial primary key,
+name varchar(255) not null
+);
 
 alter table animals drop column species ;
 ALTER TABLE animals ADD COLUMN species_id  int;
