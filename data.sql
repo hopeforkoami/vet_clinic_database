@@ -23,7 +23,7 @@ insert into animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 
 insert into owners (full_name, age) values ('Sam Smith',34),
 ('Jennifer Orwell',19),
-('Bob', 77),
+('Bob', 45),
 ('Melody Pond',77),
 ('Dean Winchester',14),
 ('Jodie Whittaker',38);
