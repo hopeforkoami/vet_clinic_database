@@ -46,4 +46,7 @@ vets_id int references vets(id),
 date_of_visit date
 );
 
+ALTER TABLE visits RENAME COLUMN animals_id to animal_id;
+ALTER TABLE visits RENAME COLUMN vets_id to vet_id;
+
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
