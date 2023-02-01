@@ -51,3 +51,6 @@ ALTER TABLE visits RENAME COLUMN vets_id to vet_id;
 
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 ALTER TABLE visits ADD COLUMN id serial primary key;
+
+CREATE INDEX ON visits(animal_id);
+CREATE INDEX ON visits(vet_id);
