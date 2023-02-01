@@ -50,3 +50,4 @@ ALTER TABLE visits RENAME COLUMN animals_id to animal_id;
 ALTER TABLE visits RENAME COLUMN vets_id to vet_id;
 
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+ALTER TABLE visits ADD COLUMN id serial primary key;
